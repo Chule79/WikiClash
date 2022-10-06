@@ -1,6 +1,5 @@
 import './style.css'
 import './css/style_carta.css'
-import { cartaConstr } from './componentes/Cart-Component/cart-component.js'
 import { navi } from './componentes/nav-component/nav-comp.js'
 import { navi2 } from './componentes/nav-component/nav-comp.js'
 import { hero } from './componentes/hero/component.js'

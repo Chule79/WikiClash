@@ -5,9 +5,9 @@
     padding: 20px;
     align-items: flex-end;
     justify-content:center;
-    background-size: cover;
+    background-size: contain;
     display: flex;
-    
+    background-position: center;
 }
 
 .cromo h2 {

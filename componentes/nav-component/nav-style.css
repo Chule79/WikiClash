@@ -3,11 +3,15 @@ header img {
 }
 
 h1 {
-  color: #d67714;
-  -webkit-text-stroke: 3.5px #1f1c19;
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgba(219,214,27,1)10%, rgba(154,120,15,1)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 2rem;
   font-size: 3rem;
 }
+
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -16,4 +20,5 @@ header {
   background-color: #522919;
   background-image: url('https://www.transparenttextures.com/patterns/purty-wood.png');
   padding: 0;
+  border-bottom: ridge #F6DE6A 1rem;
 }

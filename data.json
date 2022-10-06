@@ -55,7 +55,7 @@
       "id": 26000007,
       "maxLevel": 9,
       "iconUrls": {
-        "medium": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png"
+        "medium": "./assets/bruja.png"
       },
       "type": "ground",
       "counter": ["Minions", "Bats", "Baby Dragon"]
@@ -95,7 +95,7 @@
       "id": 26000011,
       "maxLevel": 12,
       "iconUrls": {
-        "medium": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png"
+        "medium": "./assets/Valquiria.png"
       },
       "type": "ground",
       "counter": ["Bats", "Ballon", "Baby Dragon"]

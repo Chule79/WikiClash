@@ -1,17 +1,22 @@
 .cromo {
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 250px;
-    padding: 20px;
-    align-items: flex-end;
-    justify-content:center;
-    background-size: contain;
-    display: flex;
-    background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 250px;
+  padding: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  background-size: contain;
+  display: flex;
+  background-position: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.cromo:hover {
+  transform: scale(1.1);
 }
 
 .cromo h2 {
-    font-size: 15px;
-    color: #D67714;
-    -webkit-text-stroke: 0.5px #574A3F; 
+  font-size: 15px;
+  color: #d67714;
+  -webkit-text-stroke: 0.5px #574a3f;
 }

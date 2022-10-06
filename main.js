@@ -28,11 +28,11 @@ const mapData = (cards) => {
       imagen: card.iconUrls.medium,
     }
   })
-
   drawCard(elementsCard)
 }
 
 const drawCard = (cards) => {
+  console.log(cards)
   cards.forEach((card) => {
     const cartaCreate = `
     <div class="cromo" style='background-image: url(${card.imagen})'>

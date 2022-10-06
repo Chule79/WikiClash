@@ -1,4 +1,5 @@
 import './style.css'
+import './css/style_carta.css'
 import {cartaConstr} from "./componentes/Cart-Component/cart-component.js"
 const wall = document.querySelector("#wall")
 
@@ -31,14 +32,10 @@ const mapData = (cards) => {
 const drawCard = (cards) => {
   cards.forEach(card => {
     const cartaCreate = `
-    <div>
-        <div>
-            <img src="${card.imagen}"></img>
-        </div>
+    <div class="cromo" style='background-image: url(${card.imagen})'>
         <h2>${card.name}</h2>
-        <p>Nivael maximo alcanzable ${card.levelMax}</p>
     </div>
-`;
+    `;
     wall.innerHTML += cartaCreate;
   });
 }

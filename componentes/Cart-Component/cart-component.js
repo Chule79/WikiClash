@@ -3,7 +3,7 @@
 
 export const cartaConstr = (imagen, name, levelMax) => {
     return `
-        <div>
+        <div class="cromo">
             <div>
                 <img src="${card.imagen}"></img>
             </div>

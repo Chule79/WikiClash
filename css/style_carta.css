@@ -1,0 +1,22 @@
+.cromo {
+    background-repeat: no-repeat;
+    border: solid  black 3px ;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    align-items: flex-end;
+    justify-content:center;
+    background-size: cover;
+    display: flex;
+    text-align: justify;
+}
+
+
+
+.cromo h2 {
+    font-size: 15px;
+    color: #D67714;
+    -webkit-text-stroke: 0.5px #574A3F;
+    
+    
+}

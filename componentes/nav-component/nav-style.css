@@ -1,0 +1,21 @@
+ img {
+    width: 19%;
+    
+ }
+
+ h1 {
+    color: #D67714;
+    -webkit-text-stroke: 3.5px #1f1c19; 
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rem;
+    background-color: #522919;
+    background-image: url("https://www.transparenttextures.com/patterns/purty-wood.png");
+    padding: 0;
+
+}

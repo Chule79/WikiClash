@@ -8,15 +8,11 @@
     justify-content:center;
     background-size: cover;
     display: flex;
-    text-align: justify;
+    
 }
-
-
 
 .cromo h2 {
     font-size: 15px;
     color: #D67714;
-    -webkit-text-stroke: 0.5px #574A3F;
-    
-    
+    -webkit-text-stroke: 0.5px #574A3F; 
 }

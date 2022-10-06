@@ -11,7 +11,8 @@ body {
   place-items: center;
   background-color: #0075f2;
   background-image: url(http://www.transparenttextures.com/patterns/padded.png);
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  flex-wrap: wrap;
+  gap: 20rem;
 }
 
 .app{

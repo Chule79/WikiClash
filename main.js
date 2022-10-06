@@ -3,10 +3,12 @@ import './css/style_carta.css'
 import {cartaConstr} from "./componentes/Cart-Component/cart-component.js"
 import {navi} from "./componentes/nav-component/nav-comp.js";
 import {navi2} from "./componentes/nav-component/nav-comp.js";
+import {hero} from "./componentes/hero/component.js"
+
 
 const header = document.querySelector('header')
 const wall = document.querySelector("#wall")
-
+const details = document.querySelector('#details')
 
 const getData = async () => {
   try {
@@ -50,3 +52,4 @@ getData()
 
 //header.innerHTML = navi;
 header.innerHTML = navi2;
+details.innerHTML = hero;

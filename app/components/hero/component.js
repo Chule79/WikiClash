@@ -11,9 +11,9 @@ export const hero = (name, level, type, img, counter) => {
             <divclass='counters-container'>
                 <p class='counters-text'>Counters:</p>
                 <div class='counters'>
-                    <img src='${counter}' alt=''>
-                    <img src='${counter}' alt=''>
-                    <img src='${counter}' alt=''>
+                    <img src='' alt=''>
+                    <img src='' alt=''>
+                    <img src='' alt=''>
                 </div>
             </div>
         </div>

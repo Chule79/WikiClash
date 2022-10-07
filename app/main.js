@@ -14,7 +14,6 @@ const details = document.querySelector('#details')
 
 const fetchData = async () => {
   const data = await getData();
-  console.log(data);
   mapData(data)
 }
 
@@ -24,6 +23,7 @@ const mapData = (cards) => {
     return {
       id: card.id,
       name: card.name,
+      tipo: card.type,
       levelMax: card.maxLevel,
       imagen: card.iconUrls.medium,
     }
@@ -32,7 +32,6 @@ const mapData = (cards) => {
 }
 
 const drawCard = (cards) => {
-  console.log(cards)
   cards.forEach((card) => {
     const cartaCreate = cardComponent(card.id, card.name, card.imagen)
     wall.innerHTML += cartaCreate
@@ -41,6 +40,14 @@ const drawCard = (cards) => {
 }
 
 export const printCharacter = (character) => {
+  const details = document.querySelector('#details');
+  const hero = document.querySelector(".hero-container")
+  console.log(hero)
+  hero.remove()
+   /* const {name, type, maxLevel, iconUrls} = character
+    const img = iconUrls.medium
+    console.log(character);
+  details.innerHTML = hero(name, maxLevel, type, img)*/
   
 }
 

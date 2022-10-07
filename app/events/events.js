@@ -9,8 +9,7 @@ export const addEvents = () => {
             const cardId = e.target.id
             const data = await getData();
             const character = data.filter(item => item.id == cardId);
-            console.log(character);
-            //printCharacter(character)
+            printCharacter(character[0])
         })
     })
 }

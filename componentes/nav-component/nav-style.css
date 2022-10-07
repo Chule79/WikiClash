@@ -21,4 +21,5 @@ header {
   background-image: url('https://www.transparenttextures.com/patterns/purty-wood.png');
   padding: 0;
   border-bottom: ridge #F6DE6A 1rem;
+  box-shadow:#000000 0 0 3rem;
 }

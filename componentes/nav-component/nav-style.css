@@ -4,7 +4,7 @@ header img {
 
 h1 {
   font-size: 72px;
-  background: -webkit-linear-gradient(rgba(219,214,27,1)10%, rgba(154,120,15,1)100%);
+  background: -webkit-linear-gradient(rgba(219,214,27,1)10%, rgb(0, 0, 0)100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 2rem;

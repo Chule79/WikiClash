@@ -44,6 +44,7 @@ export const printCharacter = (character, data) => {
   heroCont.remove()
   const { name, type, maxLevel, iconUrls, counter } = character
   const img = iconUrls.medium
+  console.log(character);
   const counters = counter
     .map((item) => {
       return data.filter((el) => el.name === item)

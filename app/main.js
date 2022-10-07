@@ -37,13 +37,21 @@ const drawCard = (cards) => {
   addEvents()
 }
 
-export const printCharacter = (character) => {
+export const printCharacter = (character, data) => {
+  console.log(data)
   const details = document.querySelector('#details')
   const heroCont = document.querySelector('.hero-container')
   heroCont.remove()
-  const { name, type, maxLevel, iconUrls } = character
+  const { name, type, maxLevel, iconUrls, counter } = character
   const img = iconUrls.medium
-  const newHero = hero(name, maxLevel, type, img)
+  const counters = counter
+    .map((item) => {
+      return data.filter((el) => el.name === item)
+    })
+    .flat()
+  const counterImgs = counters.map((item) => item.iconUrls.medium)
+  const [img1, img2, img3] = counterImgs
+  const newHero = hero(name, maxLevel, type, img, img1, img2, img3)
   details.innerHTML += newHero
 }
 

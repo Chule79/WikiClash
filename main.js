@@ -1,8 +1,8 @@
 import './style.css'
-import './css/style_carta.css'
-import { navi } from './componentes/nav-component/nav-comp.js'
-import { navi2 } from './componentes/nav-component/nav-comp.js'
-import { hero } from './componentes/hero/component.js'
+
+import { navi2 } from './components/nav-component/nav-comp.js'
+import { hero } from './components/hero/component.js'
+import { cardComponent } from './components/card/component'
 import logo from './assets/logo.png'
 import fire from './assets/fire.png'
 
@@ -34,11 +34,7 @@ const mapData = (cards) => {
 const drawCard = (cards) => {
   console.log(cards)
   cards.forEach((card) => {
-    const cartaCreate = `
-    <div class="cromo" style='background-image: url(${card.imagen})'>
-        <h2>${card.name}</h2>
-    </div>
-    `
+    const cartaCreate = cardComponent(card.name, card.imagen)
     wall.innerHTML += cartaCreate
   })
 }

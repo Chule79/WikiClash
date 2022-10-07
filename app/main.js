@@ -46,20 +46,26 @@ export const printCharacter = (character, data) => {
   heroCont.remove()
   const { name, type, maxLevel, iconUrls, counter } = character
   const img = iconUrls.medium
-  console.log(character);
   const counters = counter
     .map((item) => {
       return data.filter((el) => el.name === item)
     })
     .flat()
-  const counterImgs = counters.map((item) => item.iconUrls.medium)
+  const counterImgs = counters.map((item) =>{
+    return{
+      id: item.id,
+      name: item.name,
+      tipo: item.type,
+      levelMax: item.maxLevel,
+      image: item.iconUrls.medium,
+  }})
   const [img1, img2, img3] = counterImgs
   const newHero = hero(character)
   details.innerHTML += newHero
     counterImgs.forEach((count) => {
       const counterContainer = document.querySelector('#counterContainer')
-      counterContainer.innerHTML += counterComp(count)
-       console.log(counterContainer);
+      counterContainer.innerHTML += counterComp(count.image, count.name)
+      
     })
    
 }

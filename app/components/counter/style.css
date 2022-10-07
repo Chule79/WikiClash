@@ -2,3 +2,6 @@
     height: 40px;
     width: 40px;
   }
+  .counter:hover {
+    transform: scale(1.1);
+  }

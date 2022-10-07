@@ -6,10 +6,12 @@ import { cardComponent } from './components/card/component.js'
 import logo from './assets/logo.png'
 import fire from './assets/fire.png'
 import { addEvents } from './events/events.js'
+import { counterComp } from "./components/counter/component.js";
 
 const header = document.querySelector('header')
 const wall = document.querySelector('#wall')
 const details = document.querySelector('#details')
+
 
 const fetchData = async () => {
   const data = await getData()
@@ -52,12 +54,18 @@ export const printCharacter = (character, data) => {
     .flat()
   const counterImgs = counters.map((item) => item.iconUrls.medium)
   const [img1, img2, img3] = counterImgs
-  const newHero = hero(name, maxLevel, type, img, img1, img2, img3)
+  const newHero = hero(character)
   details.innerHTML += newHero
+    counterImgs.forEach((count) => {
+      const counterContainer = document.querySelector('#counterContainer')
+      counterContainer.innerHTML += counterComp(count)
+       console.log(counterContainer);
+    })
+   
 }
 
 fetchData()
-//header.innerHTML = navi;
+
 header.innerHTML = navi2
 details.innerHTML = hero(   {
   "name": "Electro Spirit",

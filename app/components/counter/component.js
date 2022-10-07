@@ -2,8 +2,8 @@ import "./style.css";
 
 
 
-const countersImg = (url, title ) => {
+export const counterComp = (url, title ) => {
     return `
-        <image src="${url}" alt="${title}"></image>
+        <image class="counter" src="${url}" alt="${title}"></image>
     `
 }

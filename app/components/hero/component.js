@@ -11,7 +11,7 @@ export const hero = (character) => {
             <p>Type: ${character.type}</p>
             <divclass='counters-container'>
                 <p class='counters-text'>Counters:</p>
-                <div class='counters' id="counter">
+                <div class='counters' id="counterContainer">
                     
                 </div>
             </div>

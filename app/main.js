@@ -59,4 +59,13 @@ export const printCharacter = (character, data) => {
 fetchData()
 //header.innerHTML = navi;
 header.innerHTML = navi2
-details.innerHTML = hero('knight', 14, 'ground', logo, fire)
+details.innerHTML = hero(   {
+  "name": "Electro Spirit",
+  "id": 26000084,
+  "maxLevel": 14,
+  "iconUrls": {
+    "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
+  },
+  "type": "ground",
+  "counter": ["Minions", "Balloon", "Mother Witch"]
+},)

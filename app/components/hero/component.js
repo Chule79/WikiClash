@@ -1,20 +1,18 @@
 import { printCharacter } from '../../main'
 import './style.css'
 
-export const hero = (name, level, type, img, i1, i2, i3) => {
+export const hero = (character) => {
   const heroComponent = `
     <div class='hero-container'>
-        <img class='character-img' src='${img}' alt=''>
+        <img class='character-img' src='${character.iconUrls.medium}' alt=''>
         <div class='details'>
-            <p>Name: ${name}</p>
-            <p>Max level: ${level}</p>
-            <p>Type: ${type}</p>
+            <p>Name: ${character.name}</p>
+            <p>Max level: ${character.maxLevel}</p>
+            <p>Type: ${character.type}</p>
             <divclass='counters-container'>
                 <p class='counters-text'>Counters:</p>
-                <div class='counters'>
-                    <img src='${i1}' alt=''>
-                    <img src='${i2}' alt=''>
-                    <img src='${i3}' alt=''>
+                <div class='counters' id="counter">
+                    
                 </div>
             </div>
         </div>

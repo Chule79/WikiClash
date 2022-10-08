@@ -1,8 +1,8 @@
-import { printCharacter } from '../../main'
+/* import { printCharacter } from '../../main' */
 import './style.css'
 
-export const hero = (character) => {
-  const heroComponent = `
+export const heroComponent = (character) => {
+  const hero = `
     <div class='hero-container'>
         <img class='character-img' src='${character.iconUrls.medium}' alt=''>
         <div class='details'>
@@ -11,7 +11,7 @@ export const hero = (character) => {
             <p>Type: ${character.type}</p>
             <divclass='counters-container'>
                 <p class='counters-text'>Counters:</p>
-                <div class='counters' id="counterContainer">
+                <div class='counters' id="counters">
                     
                 </div>
             </div>
@@ -19,5 +19,5 @@ export const hero = (character) => {
     </div>
     `
 
-  return heroComponent
+  return hero
 }

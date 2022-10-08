@@ -1,85 +1,75 @@
 import './style.css'
 import { getData } from './services/api.js'
-import { navi2 } from './components/nav-component/nav-comp.js'
-import { hero } from './components/hero/component.js'
+// Components
+import { headerComponent } from './components/nav-component/nav-comp.js'
+import { heroComponent } from './components/hero/component.js'
 import { cardComponent } from './components/card/component.js'
-import logo from './assets/logo.png'
-import fire from './assets/fire.png'
+import { counterComp } from './components/counter/component.js'
+// Events
 import { addEvents } from './events/events.js'
-import { counterComp } from "./components/counter/component.js";
+import { counterEvent } from './events/events.js'
 
-const header = document.querySelector('header')
-const wall = document.querySelector('#wall')
-const details = document.querySelector('#details')
-
-
-const fetchData = async () => {
+// get array of all characters
+export const fetchData = async () => {
   const data = await getData()
-  mapData(data)
+  return data
 }
 
-const mapData = (cards) => {
-  let elementsCard = cards.map((card) => {
-    return {
-      id: card.id,
-      name: card.name,
-      tipo: card.type,
-      levelMax: card.maxLevel,
-      imagen: card.iconUrls.medium,
-    }
+// get character obj from data array
+const getCharacterByName = (array, name) => {
+  return array.filter((item) => item.name === name)[0]
+}
+
+// get character obj by id
+const getCharacterById = (array, id) => {
+  return array.filter((item) => item.id === id)[0]
+}
+
+// get character
+const getCharacter = (array, param) => {
+  if (typeof param === 'string') {
+    return getCharacterByName(array, param)
+  } else {
+    return getCharacterById(array, param)
+  }
+}
+
+// print hero component
+export const printHero = (data, param) => {
+  const details = document.querySelector('#details')
+  const character = getCharacter(data, param)
+  details.innerHTML += heroComponent(character)
+
+  const arr = character.counter
+    .map((elem) => {
+      const arr2 = data.filter((item) => elem === item.name)
+      return arr2
+    })
+    .flat()
+  arr.forEach((obj) => {
+    const counters = document.querySelector('.counters')
+    counters.innerHTML += counterComp(obj.iconUrls.medium, obj.name, obj.id)
   })
-  drawCard(elementsCard)
+  counterEvent()
 }
 
-const drawCard = (cards) => {
+// print all character
+const printCards = (cards) => {
   cards.forEach((card) => {
-    const cartaCreate = cardComponent(card.id, card.name, card.imagen)
-    wall.innerHTML += cartaCreate
+    const cartaCreate = cardComponent(card)
+    cardsContainer.innerHTML += cartaCreate
   })
+}
+
+// init app
+const header = document.querySelector('header')
+const cardsContainer = document.querySelector('#wall')
+const init = async () => {
+  header.innerHTML = headerComponent
+  const data = await fetchData()
+  printHero(data, 'Baby Dragon')
+  printCards(data)
   addEvents()
 }
 
-export const printCharacter = (character, data) => {
-  console.log(data)
-  const details = document.querySelector('#details')
-  const heroCont = document.querySelector('.hero-container')
-  heroCont.remove()
-  const { name, type, maxLevel, iconUrls, counter } = character
-  const img = iconUrls.medium
-  const counters = counter
-    .map((item) => {
-      return data.filter((el) => el.name === item)
-    })
-    .flat()
-  const counterImgs = counters.map((item) =>{
-    return{
-      id: item.id,
-      name: item.name,
-      tipo: item.type,
-      levelMax: item.maxLevel,
-      image: item.iconUrls.medium,
-  }})
-  const [img1, img2, img3] = counterImgs
-  const newHero = hero(character)
-  details.innerHTML += newHero
-    counterImgs.forEach((count) => {
-      const counterContainer = document.querySelector('#counterContainer')
-      counterContainer.innerHTML += counterComp(count.image, count.name)
-      
-    })
-   
-}
-
-fetchData()
-
-header.innerHTML = navi2
-details.innerHTML = hero(   {
-  "name": "Electro Spirit",
-  "id": 26000084,
-  "maxLevel": 14,
-  "iconUrls": {
-    "medium": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png"
-  },
-  "type": "ground",
-  "counter": ["Minions", "Balloon", "Mother Witch"]
-},)
+init()

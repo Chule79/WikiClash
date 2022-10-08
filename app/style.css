@@ -5,6 +5,7 @@
 }
 
 body {
+  width: 100%;
   font-family: You Blockhead;
   margin: 0;
   display: flex;
@@ -15,11 +16,11 @@ body {
   gap: 20rem;
 }
 
-.app{
-
+#app {
+  width: 100%;
 }
 
-.wall{
+.wall {
   display: flex;
   flex-wrap: wrap;
   width: 100%;

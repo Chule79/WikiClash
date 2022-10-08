@@ -1,9 +1,9 @@
 import './style.css'
 
-export const cardComponent = (id, name, image) => {
+export const cardComponent = (card) => {
   return `
-    <div class="cromo" id="${id}" style='background-image: url(${image})'>
-        <h2>${name}</h2>
+    <div data-number=${card.id} class="cromo" id="cromo" style='background-image: url(${card.iconUrls.medium})'>
+        <h2>${card.name}</h2>
     </div>
     `
 }

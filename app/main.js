@@ -5,6 +5,7 @@ import { headerComponent } from './components/nav-component/nav-comp.js'
 import { heroComponent } from './components/hero/component.js'
 import { cardComponent } from './components/card/component.js'
 import { counterComp } from './components/counter/component.js'
+import {searchComponent} from './components/search/search.js'
 // Events
 import { addEvents } from './events/events.js'
 import { counterEvent } from './events/events.js'
@@ -79,8 +80,10 @@ const printCards = (cards) => {
 // init app
 const header = document.querySelector('header')
 const cardsContainer = document.querySelector('#wall')
+const searchContainer = document.querySelector("#searchDiv")
 const init = async () => {
   header.innerHTML = headerComponent
+  searchContainer.innerHTML += searchComponent
   const data = await fetchData()
   printHero(data, 'Baby Dragon')
   printCards(data)

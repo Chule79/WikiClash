@@ -12,7 +12,7 @@ export const cardsEvents = (array) => {
     card.addEventListener('click', async (e) => {
       const value = e.target.dataset.number
       const data = await fetchData()
-      const heroContainer = document.querySelector('.hero-container')
+      const heroContainer = document.querySelector('.heroCont')
       heroContainer.remove()
       printHero(data, Number(value))
     })
@@ -25,7 +25,7 @@ export const counterEvent = () => {
     counter.addEventListener('click', async (e) => {
       const value = e.target.dataset.number
       const data = await fetchData()
-      const heroContainer = document.querySelector('.hero-container')
+      const heroContainer = document.querySelector('.heroCont')
       heroContainer.remove()
       printHero(data, Number(value))
     })

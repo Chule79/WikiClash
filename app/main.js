@@ -39,6 +39,21 @@ export const printHero = (data, param) => {
   const details = document.querySelector('#details')
   const character = getCharacter(data, param)
   details.innerHTML += heroComponent(character)
+    
+    const porfavor = document.querySelector("#detailsC")
+    const sobreado = () => {
+    if(character.maxLevel == 14){
+      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(31, 32, 35, 1) ;"
+    }if(character.maxLevel == 12){
+      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(253, 101, 0, 1) ;"
+    }if(character.maxLevel == 9){
+      detailsC.style.cssText ="box-shadow: 0 0 90px rgb(202, 1, 254, 1) ;"
+    }if(character.maxLevel == 6){
+      detailsC.style.cssText ="box-shadow: 0 0 90px rgb(246, 246, 246, 1) ;"
+    }if(character.maxLevel == 4){
+      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(249, 226, 94, 1) ;"
+    }}
+    sobreado(character)
 
   const arr = character.counter
     .map((elem) => {

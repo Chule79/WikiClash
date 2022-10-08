@@ -1,3 +1,5 @@
+import "./style.css"
+
 export const searchComponent = 
     `
     <div id="search">

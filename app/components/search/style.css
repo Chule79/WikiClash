@@ -1,0 +1,16 @@
+#searchDiv {
+    margin: 3rem;
+    margin-left: 8rem;
+    margin-top: 5rem;
+    padding: 0;
+
+}
+
+#searchCharacter {
+    box-shadow: 0 0 90px rgb(32, 33, 35);
+    border: none;
+    border-radius: 4px;
+    height: 2rem;
+    width: 15rem;
+}
+

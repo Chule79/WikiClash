@@ -9,7 +9,7 @@ export const heroComponent = (character) => {
             <p>Name: ${character.name}</p>
             <p>Max level: ${character.maxLevel}</p>
             <p>Type: ${character.type}</p>
-            <divclass='counters-container'>
+            <div class='counters-container'>
                 <p class='counters-text'>Counters:</p>
                 <div class='counters' id="counters">
                     

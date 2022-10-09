@@ -1,0 +1,37 @@
+footer {
+  margin-top: 6rem;
+  padding: 1.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6de6a;
+}
+
+footer ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer li {
+  transition: all 0.3s ease-in-out;
+}
+
+footer li:hover {
+  transform: scale(1.2);
+  color: #1867c7;
+}
+
+footer li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer li a img {
+  height: 25px;
+  width: 25px;
+  margin-right: 1rem;
+}

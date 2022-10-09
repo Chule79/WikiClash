@@ -9,7 +9,6 @@
 }
 
 .heroCont .detailsC {
-  width: 20%;
   height: 100%;
   padding: 3rem;
   display: flex;
@@ -23,8 +22,21 @@
   border-radius: 12px;
   border: ridge #f6de6a 1rem;
 }
+
+.heroCont .counters-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .heroCont .counters-text {
   margin-bottom: 0.5rem;
+}
+
+.heroCont .detailsC p {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 @media screen and (max-width: 711px) {

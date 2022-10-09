@@ -5,7 +5,8 @@ import { headerComponent } from './components/nav-component/nav-comp.js'
 import { heroComponent } from './components/hero/component.js'
 import { cardComponent } from './components/card/component.js'
 import { counterComp } from './components/counter/component.js'
-import {searchComponent} from './components/search/search.js'
+import { searchComponent } from './components/search/search.js'
+import { footerComponent } from './components/footer/component'
 // Events
 import { addEvents } from './events/events.js'
 import { counterEvent } from './events/events.js'
@@ -40,21 +41,26 @@ export const printHero = (data, param) => {
   const details = document.querySelector('#details')
   const character = getCharacter(data, param)
   details.innerHTML += heroComponent(character)
-    
-    const porfavor = document.querySelector("#detailsC")
-    const sobreado = () => {
-    if(character.maxLevel == 14){
-      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(31, 32, 35, 1) ;"
-    }if(character.maxLevel == 12){
-      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(253, 101, 0, 1) ;"
-    }if(character.maxLevel == 9){
-      detailsC.style.cssText ="box-shadow: 0 0 90px rgb(202, 1, 254, 1) ;"
-    }if(character.maxLevel == 6){
-      detailsC.style.cssText ="box-shadow: 0 0 90px rgb(246, 246, 246, 1) ;"
-    }if(character.maxLevel == 4){
-      detailsC.style.cssText ="box-shadow: 0 0 90px rgba(249, 226, 94, 1) ;"
-    }}
-    sobreado(character)
+
+  const porfavor = document.querySelector('#detailsC')
+  const sobreado = () => {
+    if (character.maxLevel == 14) {
+      detailsC.style.cssText = 'box-shadow: 0 0 90px rgba(31, 32, 35, 1) ;'
+    }
+    if (character.maxLevel == 12) {
+      detailsC.style.cssText = 'box-shadow: 0 0 90px rgba(253, 101, 0, 1) ;'
+    }
+    if (character.maxLevel == 9) {
+      detailsC.style.cssText = 'box-shadow: 0 0 90px rgb(202, 1, 254, 1) ;'
+    }
+    if (character.maxLevel == 6) {
+      detailsC.style.cssText = 'box-shadow: 0 0 90px rgb(246, 246, 246, 1) ;'
+    }
+    if (character.maxLevel == 4) {
+      detailsC.style.cssText = 'box-shadow: 0 0 90px rgba(249, 226, 94, 1) ;'
+    }
+  }
+  sobreado(character)
 
   const arr = character.counter
     .map((elem) => {
@@ -80,13 +86,15 @@ const printCards = (cards) => {
 // init app
 const header = document.querySelector('header')
 const cardsContainer = document.querySelector('#wall')
-const searchContainer = document.querySelector("#searchDiv")
+const searchContainer = document.querySelector('#searchDiv')
+const footer = document.querySelector('#footer')
 const init = async () => {
   header.innerHTML = headerComponent
   searchContainer.innerHTML += searchComponent
   const data = await fetchData()
   printHero(data, 'Baby Dragon')
   printCards(data)
+  footer.innerHTML += footerComponent
   addEvents()
 }
 

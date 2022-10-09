@@ -1,6 +1,5 @@
 .heroCont {
   padding: 1rem 6rem;
-  height: 400px;
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -18,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #b7c7dd;
-  background-image: url("https://www.transparenttextures.com/patterns/nice-snow.png");
+  background-image: url('https://www.transparenttextures.com/patterns/nice-snow.png');
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 12px;
@@ -28,3 +27,19 @@
   margin-bottom: 0.5rem;
 }
 
+@media screen and (max-width: 711px) {
+  .heroCont {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .heroCont .detailsC {
+    width: 53%;
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .heroCont {
+    padding: 2rem;
+  }
+}

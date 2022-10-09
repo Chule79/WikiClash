@@ -1,16 +1,38 @@
 #searchDiv {
-    margin: 3rem;
-    margin-left: 8rem;
-    margin-top: 5rem;
-    padding: 0;
-
+  height: 100%;
+  padding: 3rem 5rem;
 }
 
 #searchCharacter {
-    box-shadow: 0 0 90px rgb(32, 33, 35);
-    border: none;
-    border-radius: 4px;
-    height: 2rem;
-    width: 15rem;
+  height: 100%;
+  box-shadow: 0 0 90px rgb(32, 33, 35);
+  border: none;
+  border-radius: 4px;
+  width: 15rem;
+  padding-left: 1rem;
 }
 
+#search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#buttonSearch {
+  cursor: pointer;
+  height: 100%;
+  padding: 0.2rem 1rem;
+}
+.search-cont {
+  margin-top: 1rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 456px) {
+  #searchDiv {
+    padding: 2rem;
+  }
+}
